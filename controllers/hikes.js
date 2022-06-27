@@ -10,7 +10,7 @@ function newHike(req, res){
     })
 }
 
-function create(req, res){
+function createHike(req, res){
     Profile.findById(req.user.profile._id)
     .then(profile => {
         profile.hikes.push(req.body)
@@ -27,5 +27,5 @@ function create(req, res){
 
 export{
     newHike as new,
-    create
+    createHike
 }

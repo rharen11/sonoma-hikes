@@ -5,7 +5,7 @@ import { router } from './index.js'
 
 router.get('/new', hikesCtrl.new)
 
-router.post('/hikes', hikesCtrl.create)
+router.post('/hikes', hikesCtrl.createHike)
 
 export {
     router

@@ -6,7 +6,7 @@ function show(req, res){
     const isSelf = profile._id.equals(req.user.profile._id)
     res.render("profiles/show", {
       title: `${profile.name}'s Hikes`,
-      profile,
+      profile: profile,
       isSelf
     })
   })

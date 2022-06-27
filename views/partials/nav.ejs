@@ -4,25 +4,25 @@
 </head>
 <body>
   <nav>
-    <a 
+    <% if (user) { %>
+      <a href="/auth/logout">
+        <button type="submit">Logout</button>
+        <a 
 			href="/trails/new"
 			<%- title === 'Add Trail' ? 'class="active"' : '' %>
 		>
 			Add New Trail
 		</a>  
     <a 
-      href="/hikes/show" <%- title === 'My Hikes' ? 'class="active"' : '' %>
+      href="/profiles/<%= user.profile._id %>" <%- title === 'My Hikes' ? 'class="active"' : '' %>
     >
       My Hikes
     </a>
     <a 
-      href="/hikes" <%- title === 'Explore Hood Mountain' ? 'class="active"' : '' %>
+      href="/profiles" <%- title === 'Explore Hood Mountain' ? 'class="active"' : '' %>
     >
       Explore Hood Mountain
     </a>
-    <% if (user) { %>
-      <a href="/auth/logout">
-        <button type="submit">Logout</button>
       </a>
     <% } else { %>
       <a href="/auth/google" class="siwg-link">

@@ -25,5 +25,5 @@ const trailSchema = new mongoose.Schema({
 const User = mongoose.model('Trail', trailSchema)
 
 export {
-  User
+  Trail
 }

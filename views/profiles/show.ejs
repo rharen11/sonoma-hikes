@@ -11,7 +11,16 @@
       >
     </div>
   <% } %>
-  <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
+  <h1>Welcome, <%= profile.name %> !</h1>
+  <form 
+    id="add-hike-form"
+    action="/profiles/<%= profile._id %>/hikes"
+    method="POST"
+    <label for="add-hike"></label>
+    <button type="submit">Add Hike!</button>
+  </form>
+  <h2>Hikes</h2>
+  <div>HIKES WILL GO HERE</div>
 </main>
 
 <%- include('../partials/footer') %>

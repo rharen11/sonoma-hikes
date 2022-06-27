@@ -14,13 +14,17 @@
   <h1>Welcome, <%= profile.name %> !</h1>
   <form 
     id="add-hike-form"
-    action="/profiles/<%= profile._id %>/hikes"
-    method="POST"
+    action="/hikes/new"
+    method="GET">
     <label for="add-hike"></label>
     <button type="submit">Add Hike!</button>
   </form>
   <h2>Hikes</h2>
   <div>HIKES WILL GO HERE</div>
+  <div>
+    <button type="submit">Edit</button>
+    <button type="submit">Delete</button>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>

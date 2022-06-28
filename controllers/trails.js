@@ -10,6 +10,17 @@ function index(req, res){
     })
 }
 
+function newTrail(req, res){
+    Trail.find({})
+    .then(trails => {
+        res.render('trails//new', {
+            title: "Add New Trail",
+            trails
+        })
+    })
+}
+
 export{
-    index
+    index,
+    newTrail as new
 }

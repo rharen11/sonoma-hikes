@@ -5,6 +5,8 @@ const router = Router()
 
 router.get('/', trailsCtrl.index)
 
+router.get('/new', trailsCtrl.new)
+
 export {
   router
 }

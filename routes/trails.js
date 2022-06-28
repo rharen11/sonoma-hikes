@@ -1,13 +1,9 @@
 import { Router } from 'express'
+import * as trailsCtrl from '../controllers/trails.js'
 
 const router = Router()
 
-router.get('/', function (req, res) {
-  res.render('index', { 
-    title: 'Welcome to Sonoma Mountain!', 
-    user: req.user ? req.user : null 
-  })
-})
+router.get('/', trailsCtrl.index)
 
 export {
   router

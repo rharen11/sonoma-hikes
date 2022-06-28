@@ -22,7 +22,7 @@ const trailSchema = new mongoose.Schema({
   timestamps: true,
 })
 
-const User = mongoose.model('Trail', trailSchema)
+const Trail = mongoose.model('Trail', trailSchema)
 
 export {
   Trail

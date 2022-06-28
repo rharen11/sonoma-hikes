@@ -2,33 +2,13 @@
 <%- include('./partials/nav') %>
 
 <main>
+  <% if (user) {%>
+  <h1>Welcome to Hood Mountain, <%= user.profile.name %> !</h1>
+  <h2>Explore a mountain with plenty of room for everyone!</h2>
+  <% } else { %>
   <h1>Welcome to Hood Mountain!</h1>
-  <h2>Sonoma County, CA</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Trail</th>
-        <th>Total Milage</th>
-        <th>Sun Exposure</th>
-        <th>Dogs Allowed?</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% trails.forEach(trail => { %> 
-        <tr>
-          <td><%= trail.name %></td>
-          <td><%= trail.mileage %></td>
-          <td><%= trail.exposure %></td>
-          <td><%= trail.dogsAllowed %></td>
-          <td>
-            <form action="/trails/<%= trail._id %>?_meth=DELETE" method="POST">
-              <button>X</button>
-            </form>
-          </td>
-        </tr>
-      <% }) %>
-    </tbody>
-  </table>
+  <h2>Log in to explore Sonoma</h2>
+  <% } %>
 </main>
 
 <%- include('./partials/footer') %>

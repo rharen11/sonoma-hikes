@@ -12,8 +12,26 @@
   <h1>Welcome, <%= profile.name %> !</h1>
   <form 
     id="add-hike-form"
-    action="/hikes/new"
-    method="GET">
+    action="/profiles"
+    method="POST">
+    <form id="new-form" action="/profiles/<%= user.profile._id%>" method="POST">
+      <label for="trail">Trail:</label>
+      <input type="text" name="trail" id="trail">
+      <label for="mileage">Mileage:</label>
+      <input type="text" name="mileage" id="mileage">
+      <label for="postHike">How did you feel after your hike?</label>
+      <select name="postHike" id="postHike-select" >
+          <option value="great">Great!</option>
+          <option value="good">Pretty good</option>
+          <option value="tired">Tired</option>
+          <option value="exhausted">That was tough!</option>
+      </select> 
+      <label for="timeOfDay-select">Time of Day:</label>
+      <select name="timeOfDay" id="timeOfDay-select" >
+        <option value="morning">Morning</option>
+        <option value="midday">Midday</option>
+        <option value="evening">Evening</option>
+      </select>
     <label for="add-hike"></label>
     <button type="submit">Add Hike!</button>
   </form>

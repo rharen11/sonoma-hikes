@@ -2,21 +2,17 @@ import mongoose from 'mongoose'
 
 const trailSchema = new mongoose.Schema({
   name: {
-    type: String,
-    required: true
+    type: String
   },
   totalMileage: {
     type: Number,
-    min: 0,
-    required: true
+    min: 0
   },
   exposure: {
-    type: String,
-    enum: ["low", "moderate", "high"]
+    type: String
   },
   dogsAllowed: {
-    type: String,
-    enum: ["yes", "no"]
+    type: String
   }
 }, {
   timestamps: true,

@@ -7,6 +7,8 @@ router.get('/', trailsCtrl.index)
 
 router.get('/new', trailsCtrl.new)
 
+router.post('/', trailsCtrl.create)
+
 export {
   router
 }

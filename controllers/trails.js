@@ -18,9 +18,26 @@ function newTrail(req, res){
             trails
         })
     })
-}
+    .catch(err => {
+        console.log(err)
+        res.redirect('/trails')
+      })
+    }
+
+function create(req, res){
+    Trail.create(req.body)
+    console.log(req.body)
+    .then(trail => {
+        res.redirect('/trails')
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/trails')
+      })
+    }
 
 export{
     index,
-    newTrail as new
+    newTrail as new,
+    create
 }

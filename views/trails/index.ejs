@@ -4,6 +4,31 @@
 <main>
   <h1>Welcome to Hood Mountain!</h1>
   <h2>Sonoma County, CA</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Trail</th>
+        <th>Total Milage</th>
+        <th>Sun Exposure</th>
+        <th>Dogs Allowed?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% trails.forEach(trail => { %> 
+        <tr>
+          <td><%= trail.name %></td>
+          <td><%= trail.totalMileage %></td>
+          <td><%= trail.exposure %></td>
+          <td><%= trail.dogsAllowed %></td>
+          <td>
+            <form action="/trails/<%= trail._id %>?_meth=DELETE" method="POST">
+              <button>X</button>
+            </form>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
 </main>
 
 <%- include('../partials/footer') %>

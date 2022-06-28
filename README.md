@@ -1,4 +1,4 @@
-# Welcome to Sonoma Hiking! :tree:
+# Welcome to Sonoma Hiking! :happy:
 
 ## This application allows the user to explore the beautiful Hood Mountain in Sonoma County, CA. With the many trails, outlooks, and wildlife the user is sure to find their way to a great experience with nature- all with the guidnace of this application!
 
@@ -8,7 +8,8 @@
 
 ## Installation 
 
-Clone the e-generator repository from Github, install Node.js package, and add .env file for database connection. 
+1. Clone the e-generator repository from Github, 
+2. Install Node.js package and add .env file for database connection. 
 
 ## Usage
 

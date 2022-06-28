@@ -8,7 +8,9 @@ router.get('/:id', isLoggedIn, profilesCtrl.show)
 
 router.get('/new', isLoggedIn, profilesCtrl.new)
 
-router.post('/', isLoggedIn, profilesCtrl.create)
+router.post('/', isLoggedIn, profilesCtrl.createHike)
+
+router.delete('/profiles/:id', profilesCtrl.delete)
 
 export {
   router

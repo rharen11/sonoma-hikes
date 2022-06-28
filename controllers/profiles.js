@@ -26,7 +26,7 @@ function newHike(req, res){
     })
 }
 
-function create(req, res){
+function createHike(req, res){
     Profile.findById(req.user.profile._id)
     .then(profile => {
         profile.hikes.push(req.body)
@@ -42,8 +42,18 @@ function create(req, res){
       })
 }
 
+function deleteHike(req, res){
+    parent.children.id(_id).remove();
+    parent.child.remove();
+    parent.save(function(err){
+        if(err) return handleError(err);
+        console.log('the subdocs were removed')
+    })
+}
+
 export{
     show,
     newHike as new,
-    create
+    createHike,
+    deleteHike as delete
 }

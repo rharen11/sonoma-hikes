@@ -45,7 +45,7 @@
   </tr>
   <% }) %>
   <div>
-    <button type="submit">Edit</button>
+    <form action="/profiles/<%= profile._id %>/edit" method="GET"></form>
     <button type="submit">Delete</button>
   </div>
 </main>

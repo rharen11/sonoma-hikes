@@ -9,6 +9,8 @@ router.get('/new', trailsCtrl.new)
 
 router.post('/', trailsCtrl.create)
 
+router.delete('/:id', trailsCtrl.delete)
+
 export {
   router
 }

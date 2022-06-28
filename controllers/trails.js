@@ -8,6 +8,10 @@ function index(req, res){
             trails, trails
         })
     })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/trails')
+      })
 }
 
 function newTrail(req, res){
@@ -36,8 +40,16 @@ function create(req, res){
       })
     }
 
+function deleteTrail(req, res){
+    Trail.findByIdAndDelete(req.params.id)
+    .then(() => {
+        res.redirect('/trails')
+    })
+}
+
 export{
     index,
     newTrail as new,
-    create
+    create,
+    deleteTrail as delete
 }

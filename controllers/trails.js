@@ -47,6 +47,24 @@ function create(req, res){
                 title: "Edit Trail"
             })
         })
+        .catch(err => {
+            console.log(err)
+            res.redirect('/trails')
+          })
+    }
+
+    function update(req, res){
+        Trail.findById(req.params.id)
+        .then(trail => {
+            trail.updateOne(req.body, {new: true})
+            .then(updatedTrail => {
+                res.redirect('/trails')
+            })
+        })
+        .catch(err => {
+            console.log(err)
+            res.redirect('/trails')
+          })
     }
 
 function deleteTrail(req, res){
@@ -54,6 +72,10 @@ function deleteTrail(req, res){
     .then(() => {
         res.redirect('/trails')
     })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/trails')
+      })
 }
 
 export{
@@ -61,5 +83,6 @@ export{
     newTrail as new,
     create,
     deleteTrail as delete,
-    edit
+    edit,
+    update
 }

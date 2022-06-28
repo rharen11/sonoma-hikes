@@ -17,7 +17,7 @@ function index(req, res){
 function newTrail(req, res){
     Trail.find({})
     .then(trails => {
-        res.render('trails//new', {
+        res.render('trails/new', {
             title: "Add New Trail",
             trails
         })
@@ -30,7 +30,6 @@ function newTrail(req, res){
 
 function create(req, res){
     Trail.create(req.body)
-    console.log(req.body)
     .then(trail => {
         res.redirect('/trails')
     })

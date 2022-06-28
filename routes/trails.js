@@ -11,6 +11,8 @@ router.post('/', trailsCtrl.create)
 
 router.delete('/:id', trailsCtrl.delete)
 
+router.get('/:id/edit', trailsCtrl.edit)
+
 export {
   router
 }

@@ -39,6 +39,16 @@ function create(req, res){
       })
     }
 
+    function edit(req, res){
+        Trail.findById(req.params.id)
+        .then(trail => {
+            res.render('trails/edit', {
+                trail: trail,
+                title: "Edit Trail"
+            })
+        })
+    }
+
 function deleteTrail(req, res){
     Trail.findByIdAndDelete(req.params.id)
     .then(() => {
@@ -50,5 +60,6 @@ export{
     index,
     newTrail as new,
     create,
-    deleteTrail as delete
+    deleteTrail as delete,
+    edit
 }

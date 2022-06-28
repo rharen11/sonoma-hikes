@@ -1,0 +1,19 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+    <h1><%= title %></h1>
+    <form action="/trails/<%= trail._id %>?_method=PUT" method="POST">
+        <label for="name-input">Trail Name:</label>
+        <input type="text" name="name">
+        <label for="mileage-input">Total Mileage:</label>
+        <input type="text" name="totalMileage">
+        <label for="exposure-input">Sun Exposure:</label>
+        <input type="text" name="exposure">
+        <label for="dogsAllowed-input">Are Dogs Allowed?</label>
+        <input type="text" name="dogsAllowed">
+        <button type="submit">Update Trail</button>
+    </form>
+</main>
+
+<%- include('../partials/footer') %>

@@ -24,6 +24,9 @@
             <form action="/trails/<%= trail._id %>?_method=DELETE" method="POST">
               <button>X</button>
             </form>
+            <form action="/trails/<%= trail._id %>/edit" method="GET">
+                <button>Edit</button>
+            </form>
           </td>
         </tr>
       <% }) %>

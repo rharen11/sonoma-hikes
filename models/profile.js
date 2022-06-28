@@ -18,7 +18,7 @@ const hikeSchema = new mongoose.Schema({
 const profileSchema = new mongoose.Schema({
   name: String,
   avatar: String,
-  hike: [hikeSchema]
+  hikes: [hikeSchema]
 }, {
   timestamps: true
 })

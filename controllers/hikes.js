@@ -14,6 +14,7 @@ function createHike(req, res){
     Profile.findById(req.user.profile._id)
     .then(profile => {
         profile.hikes.push(req.body)
+        console.log(req.body)
         profile.save()
         .then(() => {
             res.redirect(`/profiles/${req.user.profile._id}`)

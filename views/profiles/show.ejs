@@ -3,14 +3,12 @@
 
 <main>
   <% if (profile.avatar) { %>
-    <div>
-      <img 
-        class="profile-avatar"
-        src="<%= profile.avatar %>" 
-        alt="<%= profile.name %> avatar"
-      >
-    </div>
-  <% } %>
+    <img 
+      class="profile-avatar"
+      src="<%= profile.avatar %>" 
+      alt="<%= profile.name %> avatar"
+        >
+    <% } %>
   <h1>Welcome, <%= profile.name %> !</h1>
   <form 
     id="add-hike-form"
@@ -20,7 +18,14 @@
     <button type="submit">Add Hike!</button>
   </form>
   <h2>Hikes</h2>
-  <div>HIKES WILL GO HERE</div>
+  <% profile.hikes.forEach(hike => { %> 
+  <tr>
+    <td><%= hike.trail %></td>
+    <td><%= hike.mileage %></td>
+    <td><%= hike.timeOfDay %></td>
+    <td><%= hike.postHike %></td>
+  </tr>
+  <% }) %>
   <div>
     <button type="submit">Edit</button>
     <button type="submit">Delete</button>

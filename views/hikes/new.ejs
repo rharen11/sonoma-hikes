@@ -3,7 +3,7 @@
 
 <main>
     <h1><%= title %></h1>
-  <form id="new-form" action="/profiles/<%= user.profile._id %>?_method=PUT" method="POST">
+  <form id="new-form" action="/profiles/<%= user.profile._id%>" method="POST">
     <label for="trail">Trail:</label>
     <input type="text" name="trail" id="trail">
     <label for="mileage">Mileage:</label>

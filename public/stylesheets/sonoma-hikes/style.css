@@ -45,7 +45,7 @@ nav > a {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .picture-placeholder{
@@ -79,6 +79,35 @@ nav > a {
     border: solid thin #FFFBCE;
 
     border-radius: 100px;
+}
+
+#add-hike-form{
+    display: flex;
+    flex-direction: column;
+}
+
+#show-profiles-hikes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#add-new-trail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#add-trail-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#add-trail-title{
+    display: flex;
+    justify-content: center;
 }
 
 nav, footer{

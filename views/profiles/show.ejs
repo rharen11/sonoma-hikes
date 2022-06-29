@@ -41,8 +41,12 @@
   </form>
   </div>
 </div>
+<div id="show-profiles-hikes">
+  <div>
   <h2>Hikes</h2>
+  </div>
   <% profile.hikes.forEach(hike => { %> 
+    <div>
   <tr>
     <td><%= hike.trail %></td>
     <td><%= hike.mileage %></td>
@@ -50,9 +54,9 @@
     <td><%= hike.postHike %></td>
   </tr>
   <% }) %>
-  <div>
     <form action="/profiles/<%= profile._id %>/edit" method="GET"></form>
     <button type="submit">Delete</button>
+  </div>
   </div>
 </main>
 

@@ -3,24 +3,38 @@
 
 <main>
 <div id="trail-details">
- <h1><%= title %></h1>
+ <h1>Explore this Trail!</h1>
  <section>
-     <div>Trail:</div>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="/assets/clouds1.jpeg" alt="Card image cap">
+        <div class="card-body">
+          <h1 class="card-title"> <%-JSON.stringify(trail.name)%> </h1>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Total Mileage: <%- JSON.stringify(trail.totalMileage)%></li>
+            <li class="list-group-item">Sun Exposure: <%- JSON.stringify(trail.exposure)%></li>
+            <li class="list-group-item">Dogs Allowed? <%- JSON.stringify(trail.dogsAllowed)%></li>
+          </ul>
+         <div class="card-body">
+            <form action="/trails/<%= trail._id %>?_method=DELETE" method="POST">
+                <button>X</button>
+              </form>
+              <form action="/trails/<%= trail._id %>/edit" method="GET">
+                  <button>Edit</button>
+              </form>
+        </div>
+      </div>
+ </section>
+</div>
+</main>
+
+<%- include('../partials/footer') %>
+
+<!-- <div>Trail:</div>
      <div><%= trail.name %></div>
      <div>Total Mileage:</div>
      <div><%= trail.totalMileage %></div>
      <div>Exsposure:</div>
      <div><%= trail.exposure %></div>
      <div>Dogs Allowed?</div>
-     <div><%= trail.dogsAllowed %></div>
-     <form action="/trails/<%= trail._id %>?_method=DELETE" method="POST">
-        <button>X</button>
-      </form>
-      <form action="/trails/<%= trail._id %>/edit" method="GET">
-          <button>Edit</button>
-      </form>
- </section>
-</div>
-</main>
-
-<%- include('../partials/footer') %>
+     <div><%= trail.dogsAllowed %></div> -->

@@ -1,21 +1,22 @@
 import { Router } from 'express'
 import * as trailsCtrl from '../controllers/trails.js'
+import { isLoggedIn } from '../middleware/middleware.js'
 
 const router = Router()
 
 router.get('/', trailsCtrl.index)
 
-router.get('/:id', trailsCtrl.show)
-
-router.get('/:id/edit', trailsCtrl.edit)
-
 router.get('/new', trailsCtrl.new)
 
-router.post('/', trailsCtrl.create)
+router.get('/:id', trailsCtrl.show)
 
-router.put('/:id', trailsCtrl.update)
+router.get('/:id/edit', isLoggedIn, trailsCtrl.edit)
 
-router.delete('/:id', trailsCtrl.delete)
+router.post('/', isLoggedIn, trailsCtrl.create)
+
+router.put('/:id', isLoggedIn, trailsCtrl.update)
+
+router.delete('/:id', isLoggedIn, trailsCtrl.delete)
 
 export {
   router

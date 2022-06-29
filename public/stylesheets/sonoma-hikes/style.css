@@ -50,12 +50,14 @@ nav > a {
 
 .picture-placeholder{
     display: flex;
+    flex-direction: column;
     justify-content: left;
 }
 
 #profile-welcome-message{
     display: flex;
-    justify-content: right;
+    flex-direction: column;
+    grid-template-columns: auto auto;
 }
 
 #trail-details{

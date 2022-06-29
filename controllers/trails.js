@@ -17,9 +17,10 @@ function index(req, res){
 function show(req, res){
     Trail.findById(req.params.id)
     .then(trail => {
+        console.log(trail)
         res.render('trails/show', {
             title: `${trail.name} Details`,
-            trail
+            trail,
         })
     })
     .catch((err) => {
@@ -44,6 +45,7 @@ function newTrail(req, res){
     }
 
 function create(req, res){
+    req.body.owner = req.user.profile._id
     Trail.create(req.body)
     .then(trail => {
         res.redirect('/trails')
@@ -71,10 +73,14 @@ function create(req, res){
     function update(req, res){
         Trail.findById(req.params.id)
         .then(trail => {
+            if(trail.owner.equals(req.user.profile._id)){
             trail.updateOne(req.body, {new: true})
             .then(updatedTrail => {
                 res.redirect('/trails')
             })
+        } else {
+            throw new Error ('Not Authorized')
+        }
         })
         .catch(err => {
             console.log(err)
@@ -85,8 +91,15 @@ function create(req, res){
 function deleteTrail(req, res){
     Trail.findByIdAndDelete(req.params.id)
     .then(() => {
+        if(trail.owner.equals(req.user.profile._id)) {
+        trail.delete()
+        .then(() => {
         res.redirect('/trails')
     })
+    } else {
+        throw new Error ('Not Authorized')
+    }
+})   
     .catch(err => {
         console.log(err)
         res.redirect('/trails')

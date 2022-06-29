@@ -31,6 +31,7 @@ function show(req, res){
 function newTrail(req, res){
     Trail.find({})
     .then(trails => {
+        console.log(req.body)
         res.render('trails/new', {
             title: "Add New Trail",
             trails

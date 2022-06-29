@@ -62,6 +62,9 @@
       <td><%= hike.mileage %></td>
       <td><%= hike.timeOfDay %></td>
       <td><%= hike.postHike %></td>
+      <form action="/profiles/hikes/<%= hike._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+      </form>
     </tr>
     <% }) %>
   </tbody>

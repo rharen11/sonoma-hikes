@@ -37,7 +37,9 @@ nav > a {
 
 #trail-index-trails{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-top: 100px;
 }
 
@@ -113,16 +115,17 @@ input{
     width: 100px;
     box-sizing: border-box;
     margin: 2px;
-    border: solid #FFFBCE;
+    border: solid thin #FFFBCE;
     border-radius: 30px;
     background-color: #647899;
+    color: #FFFBCE;
 }
 
 select{
     width: 100px;
     box-sizing: border-box;
     margin: 2px;
-    border: solid #FFFBCE;
+    border: solid thin #FFFBCE;
     border-radius: 30px;
     background-color: #647899;
 }

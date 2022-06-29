@@ -10,6 +10,8 @@ router.get('/new', isLoggedIn, profilesCtrl.new)
 
 router.post('/', isLoggedIn, profilesCtrl.createHike)
 
+router.delete('/hikes/:id', isLoggedIn, profilesCtrl.delete)
+
 export {
   router
 }

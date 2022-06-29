@@ -67,6 +67,20 @@ nav > a {
     align-items: center;
 }
 
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-img-top{
+    display: flex;
+    justify-content: center;
+    border: solid thin #FFFBCE;
+
+    border-radius: 100px;
+}
+
 nav, footer{
     grid-column: span 3;
 }

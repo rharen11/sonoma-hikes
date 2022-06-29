@@ -12,19 +12,13 @@
   <table>
     <thead>
       <tr>
-        <th>Trail</th>
-        <th>Total Milage</th>
-        <th>Sun Exposure</th>
-        <th>Dogs Allowed?</th>
+        <th>Check out the Trails!</th>
       </tr>
     </thead>
     <tbody>
       <% trails.forEach(trail => { %> 
         <tr>
           <td><%= trail.name %></td>
-          <td><%= trail.totalMileage %></td>
-          <td><%= trail.exposure %></td>
-          <td><%= trail.dogsAllowed %></td>
           <td><a href="/trails/<%= trail._id %>">Details</a></td>
           <td>
         </tr>

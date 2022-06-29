@@ -51,7 +51,9 @@ nav > a {
 .picture-placeholder{
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
+    margin-right: 200px;
+    align-items: center;
 }
 
 #profile-welcome-message{
@@ -86,11 +88,72 @@ nav > a {
     flex-direction: column;
 }
 
+#profile-hike-table-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #show-profiles-hikes{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
+}
+
+.profile-avatar{
+    size: 100px;
+    border: solid #FFFBCE;
+    border-radius: 100px;
+    margin-top: 50px;
+}
+
+input{
+    width: 100px;
+    box-sizing: border-box;
+    margin: 2px;
+    border: solid #FFFBCE;
+    border-radius: 30px;
+    background-color: #647899;
+}
+
+select{
+    width: 100px;
+    box-sizing: border-box;
+    margin: 2px;
+    border: solid #FFFBCE;
+    border-radius: 30px;
+    background-color: #647899;
+}
+
+option{
+    background-color: #FFFBCE;
+}
+
+button{
+    box-sizing: border-box;
+    background-color: #054914;
+    color: #FFFBCE;
+    max-width: 15ch;
+}
+
+#add-hike-btn{
+    margin-top: 10px;
+}
+
+table{
+    border-spacing: 0.5rem;
+}
+
+th{
+    border: 1px solid #054914;
+    padding: 0.5rem;  
+}
+
+td{
+    border: 1px solid #FFFBCE;
+    padding: 0.5rem;
 }
 
 #add-new-trail{

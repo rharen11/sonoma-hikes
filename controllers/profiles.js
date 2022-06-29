@@ -42,22 +42,8 @@ function createHike(req, res){
       })
 }
 
-function deleteHike(req, res){
-    parent.children.id(_id).remove();
-    parent.child.remove();
-    parent.save(function(err){
-        if(err) return handleError(err);
-        console.log('the subdocs were removed')
-    })
-    .catch((err) => {
-        console.log(err)
-        res.redirect("/")
-      })
-}
-
 export{
     show,
     newHike as new,
     createHike,
-    deleteHike as delete
 }

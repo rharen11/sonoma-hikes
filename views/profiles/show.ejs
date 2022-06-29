@@ -9,6 +9,7 @@
       class="profile-avatar"
       src="<%= profile.avatar %>" 
       alt="<%= profile.name %> avatar"
+      height="200px" width="200px"
         >
     <% } %>
     </div>
@@ -20,9 +21,9 @@
     method="POST">
     <form id="new-form" action="/profiles/<%= user.profile._id%>" method="POST">
       <label for="trail">Trail:</label>
-      <input type="text" name="trail" id="trail">
+      <input type="text" name="trail" id="trail" autocomplete="off">
       <label for="mileage">Mileage:</label>
-      <input type="text" name="mileage" id="mileage">
+      <input type="text" name="mileage" id="mileage" autocomplete="off">
       <label for="postHike">How did you feel after your hike?</label>
       <select name="postHike" id="postHike-select" >
           <option value="great">Great!</option>
@@ -37,25 +38,34 @@
         <option value="evening">Evening</option>
       </select>
     <label for="add-hike"></label>
-    <button type="submit">Add Hike!</button>
+    <button type="submit" id="add-hike-btn">Add Hike!</button>
   </form>
   </div>
 </div>
 <div id="show-profiles-hikes">
-  <div>
+  <div id="profile-hike-table-title">
   <h2>Hikes</h2>
   </div>
-  <% profile.hikes.forEach(hike => { %> 
-    <div>
+  <table>
+    <thead>
   <tr>
-    <td><%= hike.trail %></td>
-    <td><%= hike.mileage %></td>
-    <td><%= hike.timeOfDay %></td>
-    <td><%= hike.postHike %></td>
+    <th>Trail</th>
+    <th>Miles Hiked</th>
+    <th>Time of Day</th>
+    <th>How I felt after my hike</th>
   </tr>
-  <% }) %>
-    <form action="/profiles/<%= profile._id %>/edit" method="GET"></form>
-    <button type="submit">Delete</button>
+</thead>
+  <tbody>
+    <% profile.hikes.forEach(hike => { %> 
+    <tr>
+      <td><%= hike.trail %></td>
+      <td><%= hike.mileage %></td>
+      <td><%= hike.timeOfDay %></td>
+      <td><%= hike.postHike %></td>
+    </tr>
+    <% }) %>
+  </tbody>
+  </table>
   </div>
   </div>
 </main>

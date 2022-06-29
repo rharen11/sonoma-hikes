@@ -1,5 +1,7 @@
 import mongoose from 'mongoose'
 
+const Schema = mongoose.Schema
+
 const trailSchema = new mongoose.Schema({
   name: {
     type: String
@@ -13,7 +15,8 @@ const trailSchema = new mongoose.Schema({
   },
   dogsAllowed: {
     type: String
-  }
+  },
+  owner: {type: Schema.Types.ObjectId, ref: "Profile"}
 }, {
   timestamps: true,
 })

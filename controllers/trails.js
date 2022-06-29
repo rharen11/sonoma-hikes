@@ -22,6 +22,10 @@ function show(req, res){
             trail
         })
     })
+    .catch((err) => {
+        console.log(err)
+        res.redirect("/")
+      })
 }
 
 function newTrail(req, res){

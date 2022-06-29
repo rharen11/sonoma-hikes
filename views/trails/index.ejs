@@ -27,13 +27,6 @@
           <td><%= trail.dogsAllowed %></td>
           <td><a href="/trails/<%= trail._id %>">Details</a></td>
           <td>
-            <form action="/trails/<%= trail._id %>?_method=DELETE" method="POST">
-              <button>X</button>
-            </form>
-            <form action="/trails/<%= trail._id %>/edit" method="GET">
-                <button>Edit</button>
-            </form>
-          </td>
         </tr>
       <% }) %>
     </tbody>

@@ -49,6 +49,10 @@ function deleteHike(req, res){
         if(err) return handleError(err);
         console.log('the subdocs were removed')
     })
+    .catch((err) => {
+        console.log(err)
+        res.redirect("/")
+      })
 }
 
 export{

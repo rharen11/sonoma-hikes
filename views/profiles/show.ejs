@@ -2,6 +2,8 @@
 <%- include('../partials/nav') %>
 
 <main>
+  <div class="profiles-show">
+    <div class="picture-placeholder">
   <% if (profile.avatar) { %>
     <img 
       class="profile-avatar"
@@ -9,7 +11,10 @@
       alt="<%= profile.name %> avatar"
         >
     <% } %>
+  </div>
+  <div id="profile-welcome-message">
   <h1>Welcome, <%= profile.name %> !</h1>
+  <h2>
   <form 
     id="add-hike-form"
     action="/profiles"
@@ -35,6 +40,9 @@
     <label for="add-hike"></label>
     <button type="submit">Add Hike!</button>
   </form>
+  </h2>
+  </div>
+</div>
   <h2>Hikes</h2>
   <% profile.hikes.forEach(hike => { %> 
   <tr>

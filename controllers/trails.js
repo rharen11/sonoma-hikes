@@ -14,6 +14,16 @@ function index(req, res){
       })
 }
 
+function show(req, res){
+    Trail.findById(req.params.id)
+    .then(trail => {
+        res.render('trails/show', {
+            title: `${trail.name} Details`,
+            trail
+        })
+    })
+}
+
 function newTrail(req, res){
     Trail.find({})
     .then(trails => {
@@ -84,5 +94,6 @@ export{
     create,
     deleteTrail as delete,
     edit,
-    update
+    update,
+    show
 }

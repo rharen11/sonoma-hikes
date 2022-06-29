@@ -1,0 +1,26 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+<div id="trail-details">
+ <h1><%= title %></h1>
+ <section>
+     <div>Trail:</div>
+     <div><%= trail.name %></div>
+     <div>Total Mileage:</div>
+     <div><%= trail.totalMileage %></div>
+     <div>Exsposure:</div>
+     <div><%= trail.exposure %></div>
+     <div>Dogs Allowed?</div>
+     <div><%= trail.dogsAllowed %></div>
+     <form action="/trails/<%= trail._id %>?_method=DELETE" method="POST">
+        <button>X</button>
+      </form>
+      <form action="/trails/<%= trail._id %>/edit" method="GET">
+          <button>Edit</button>
+      </form>
+ </section>
+</div>
+</main>
+
+<%- include('../partials/footer') %>

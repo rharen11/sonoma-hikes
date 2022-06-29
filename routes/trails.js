@@ -5,6 +5,8 @@ const router = Router()
 
 router.get('/', trailsCtrl.index)
 
+router.get('/:id', trailsCtrl.show)
+
 router.get('/:id/edit', trailsCtrl.edit)
 
 router.post('/', trailsCtrl.create)

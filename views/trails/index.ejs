@@ -2,8 +2,13 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1>Welcome to Hood Mountain!</h1>
-  <h2>Sonoma County, CA</h2>
+  <div class="trail-index-title">
+    <h1>Welcome to Hood Mountain!</h1>
+  </div>
+  <div class="trail-index-title">
+    <h2>Sonoma County, CA</h2>
+  </div>
+  <div id="trail-index-trails">
   <table>
     <thead>
       <tr>
@@ -20,6 +25,7 @@
           <td><%= trail.totalMileage %></td>
           <td><%= trail.exposure %></td>
           <td><%= trail.dogsAllowed %></td>
+          <td><a href="/trails/<%= trail._id %>">Details</a></td>
           <td>
             <form action="/trails/<%= trail._id %>?_method=DELETE" method="POST">
               <button>X</button>
@@ -32,6 +38,7 @@
       <% }) %>
     </tbody>
   </table>
+</div>
 </main>
 
 <%- include('../partials/footer') %>

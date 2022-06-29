@@ -2,13 +2,19 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <% if (user) {%>
-  <h1>Welcome to Hood Mountain, <%= user.profile.name %> !</h1>
-  <h2>Explore a mountain with plenty of room for everyone!</h2>
-  <% } else { %>
-  <h1>Welcome to Hood Mountain!</h1>
-  <h2>Log in to explore Sonoma</h2>
-  <% } %>
+  <div id="welcome-page">
+    <div>
+      <% if (user) {%>
+      <h1 class="welcome-message">Welcome to Hood Mountain, <%= user.profile.name %> !</h1>
+      <h2 class="welcome-message">Ready to explore?</h2>
+      <% } else { %>
+    </div>
+    <div>
+      <h1 class="welcome-message">Welcome to Hood Mountain!</h1>
+      <h2 class="welcome-message">Log in to explore Sonoma</h2>
+      <% } %>
+    </div>
+</div>
 </main>
 
 <%- include('./partials/footer') %>

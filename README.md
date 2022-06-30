@@ -20,7 +20,6 @@ https://trello.com/b/AiJ9TXDx/hiking-app
 - Express with Node.js
 - MongoDB with Mongoose
 - git
-- Github
 
 ## Credits
 

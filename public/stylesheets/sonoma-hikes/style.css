@@ -48,6 +48,11 @@ nav > a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: large;
+    border: thin solid #054914;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: #FFFBCE;
 }
 
 .profiles-show{
@@ -88,11 +93,20 @@ nav > a {
     align-items: center;
 }
 
+.card-body{
+    display: flex;
+    flex-direction: row;
+}
+
+#trail-show-name{
+    margin-left: 20px;
+}
+
 .card-img-top{
     display: flex;
     justify-content: center;
     border: solid thin #FFFBCE;
-    margin-left: 80px;
+    margin-left: 10px;
     border-radius: 100px;
 }
 

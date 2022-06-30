@@ -2,11 +2,14 @@
 body{
     background-color:#A1AFA0;
     color: #054914;
+    background-size: cover;
 
 }
 
 body > nav{
     border: solid #054914;
+    background: url(/assets/green-leaves.jpg);
+
     border-radius: 50px;
     display: flex;
     justify-content: center;
@@ -15,26 +18,31 @@ body > nav{
 }
 
 nav > a {
+    background-color: #FFFBCE;
     margin: 20px;
     text-decoration: none;
     padding: 10px;
     border-radius: 5px;
     font-size: large;
-    color: #FFFBCE;
+    color: #054914;
   }
 
 a:hover, a:visited, a:link, a:active{
     text-decoration: none;
-    color: #E6E6D5;
+    color: #054914;
 }
 
 a:hover{
-    color: #054914;
-    background-color: #FFFBCE;
+    color: #DDF2FF;
+    background-color: #647899;
 }
 
 .fa-tree{
-    color: #FFFBCE;
+    color: #054914;
+}
+
+#fa-tree:hover{
+    color:  #DDF2FF;
 }
 
 #logged-in-img{

@@ -19,12 +19,16 @@ https://trello.com/b/AiJ9TXDx/hiking-app
 - CSS
 - Express with Node.js
 - MongoDB with Mongoose
+- git
+- Github
 
 ## Credits
 
 Used bootstrap for styling of cards (https://getbootstrap.com/docs/4.0/components/card/)
 
 Google fonts (https://fonts.google.com/)
+
+Artwork sourced from 
 
 ## Next Steps
 

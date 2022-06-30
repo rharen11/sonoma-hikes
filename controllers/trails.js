@@ -89,8 +89,8 @@ function create(req, res){
     }
 
 function deleteTrail(req, res){
-    Trail.findByIdAndDelete(req.params.id)
-    .then(() => {
+    Trail.findById(req.params.id)
+    .then(trail => {
         if(trail.owner.equals(req.user.profile._id)) {
         trail.delete()
         .then(() => {

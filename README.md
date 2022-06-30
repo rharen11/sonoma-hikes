@@ -3,14 +3,13 @@
 ![sonoma-hiking-screenshot](./public/assets/sonoma-hikes.png)
 
 
-## This application allows the user to explore the beautiful Hood Mountain in Sonoma County, CA. With the many trails, outlooks, and wildlife the user is sure to find their way to a great experience with nature- all with the guidnace of this application!
+## 
+This application allows the user to explore Hood Mountain in Sonoma County, CA. With lots of trails, outlooks, and wildlife the user is sure to find their way to a great experience with nature- all with the guidance of this application!
 
 ## Getting Started:
 
 ### Deployment
 https://sonoma-hikes.herokuapp.com/
-### Github
-https://github.com/rharen11/sonoma-hikes
 ### Trello Planning Board
 https://trello.com/b/AiJ9TXDx/hiking-app
 

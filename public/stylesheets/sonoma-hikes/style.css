@@ -77,7 +77,12 @@ a:hover{
 }
 
 #tree-trails-index{
-    color: #054914;
+    background-color: none;
+}
+
+#tree-trails-index:hover{
+    color: red;
+    background-color: none;
 }
 
 #trails-index-list{

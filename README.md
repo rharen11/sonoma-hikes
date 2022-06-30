@@ -28,7 +28,7 @@ Used bootstrap for styling of cards (https://getbootstrap.com/docs/4.0/component
 
 Google fonts (https://fonts.google.com/)
 
-Artwork sourced from 
+Artwork sourced from  (https://unsplash.com/photos/xljtGZ2-P3Y), special thanks to Nahil Naseer for the photograph (https://www.instagram.com/nahilnaseer/)
 
 ## Next Steps
 

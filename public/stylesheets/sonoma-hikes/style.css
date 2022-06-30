@@ -1,9 +1,10 @@
 
 body{
+    background: url(/assets/blue-pink-grad.jpg);
+    background-size: cover;
     background-color:#A1AFA0;
     color: #054914;
-    background-size: cover;
-
+    background-size: 1500px;
 }
 
 body > nav{

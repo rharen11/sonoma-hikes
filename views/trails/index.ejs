@@ -3,10 +3,10 @@
 
 <main>
   <div class="trail-index-title">
-    <h1>Welcome to Hood Mountain!</h1>
+    <h1 class="welcome-message">Welcome to Hood Mountain!</h1>
   </div>
   <div class="trail-index-title">
-    <h2>Sonoma County, CA</h2>
+    <h2 class="welcome-message">Sonoma County, CA</h2>
   </div>
   <div id="trail-index-trails">
     <div id="trails-index-chart-title">
@@ -15,9 +15,9 @@
       <div id="trails-index-list">
       <% trails.forEach(trail => { %> 
           <td><%= trail.name %></td>
-          <td><a href="/trails/<%= trail._id %>">Details</a>
-          </div>
+          <td><a href="/trails/<%= trail._id %>">Details</a> 
       <% }) %>
+    </div>
 </div>
 </main>
 

@@ -13,8 +13,8 @@
         >
     <% } %>
     </div>
-  <div id="profile-welcome-message">
-  <h1>Welcome, <%= profile.name %> !</h1>
+  <div>
+  <h1 class="welcome-message">Welcome, <%= profile.name %> !</h1>
   <form 
     id="add-hike-form"
     action="/profiles"
@@ -62,9 +62,10 @@
       <td><%= hike.mileage %></td>
       <td><%= hike.timeOfDay %></td>
       <td><%= hike.postHike %></td>
-      <form action="/profiles/hikes/<%= hike._id %>?_method=DELETE" method="POST">
+      <td><form action="/profiles/hikes/<%= hike._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete</button>
       </form>
+    </td>
     </tr>
     <% }) %>
   </tbody>

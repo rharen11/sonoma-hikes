@@ -28,6 +28,7 @@ nav > a {
 .welcome-message{
     display: flex;
     justify-content: center;
+    font-family: 'Parisienne', cursive;
 }
 
 .trail-index-title{
@@ -43,11 +44,21 @@ nav > a {
     margin-top: 100px;
 }
 
+#trails-index-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .profiles-show{
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 50px;
+}
+
+#profile-welcome-message{
+    font-family: 'Parisienne', cursive;
 }
 
 .picture-placeholder{
@@ -81,13 +92,26 @@ nav > a {
     display: flex;
     justify-content: center;
     border: solid thin #FFFBCE;
-
+    margin-left: 80px;
     border-radius: 100px;
+}
+
+#logged-in-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid thin #FFFBCE;
+    border-radius: 100px;
+    margin-left: 175px;
 }
 
 #add-hike-form{
     display: flex;
     flex-direction: column;
+}
+
+#add-hike-btn{
+    margin-left: 190px;
 }
 
 #profile-hike-table-title{
@@ -115,19 +139,19 @@ input{
     width: 100px;
     box-sizing: border-box;
     margin: 2px;
-    border: solid thin #FFFBCE;
+    border: solid thin #054914;
     border-radius: 30px;
-    background-color: #647899;
-    color: #FFFBCE;
+    background-color: #FFFBCE;
+    color: #054914;
 }
 
 select{
     width: 100px;
     box-sizing: border-box;
     margin: 2px;
-    border: solid thin #FFFBCE;
+    border: solid thin #054914;
     border-radius: 30px;
-    background-color: #647899;
+    background-color: #FFFBCE;
 }
 
 option{

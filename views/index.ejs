@@ -6,12 +6,16 @@
     <div>
       <% if (user) {%>
       <h1 class="welcome-message">Welcome to Hood Mountain, <%= user.profile.name %> !</h1>
-      <h2 class="welcome-message">Ready to explore?</h2>
+      <h2 class="welcome-message">Ready to hike?</h2>
+      <img id="logged-in-img" src="/assets/bodega-coast.jpeg" alt="Card image cap" width="200" height="200">
+
       <% } else { %>
     </div>
     <div>
       <h1 class="welcome-message">Welcome to Hood Mountain!</h1>
       <h2 class="welcome-message">Log in to explore Sonoma</h2>
+      <img class="card-img-top" src="/assets/blk-wht-clouds.jpeg" alt="Card image cap" width="200" height="200">
+
       <% } %>
     </div>
 </div>

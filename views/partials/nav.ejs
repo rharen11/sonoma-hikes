@@ -12,16 +12,20 @@
 			<%- title === 'Add Trail' ? 'class="active"' : '' %>
 		>
 			Add New Trail
-		</a>  
+      <i class="fa-solid fa-tree"></i>
+
+		</a> 
     <a 
       href="/profiles/<%= user.profile._id %>" <%- title === 'My Hikes' ? 'class="active"' : '' %>
     >
       My Hikes
+      <i class="fa-solid fa-tree"></i>
     </a>
     <a 
       href="/trails" <%- title === 'Explore Hood Mountain' ? 'class="active"' : '' %>
     >
       Explore Hood Mountain
+      <i class="fa-solid fa-tree"></i>
     </a>
       </a>
     <% } else { %>

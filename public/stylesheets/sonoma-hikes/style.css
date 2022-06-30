@@ -7,8 +7,11 @@ body{
 
 body > nav{
     border: solid #054914;
+    border-radius: 50px;
     display: flex;
     justify-content: center;
+    background-color: #054914;
+    color: #FFFBCE;
 }
 
 nav > a {
@@ -16,8 +19,23 @@ nav > a {
     text-decoration: none;
     padding: 10px;
     border-radius: 5px;
-    color: #004A6F;
+    font-size: large;
+    color: #FFFBCE;
   }
+
+a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+    color: #E6E6D5;
+}
+
+a:hover{
+    color: #054914;
+    background-color: #FFFBCE;
+}
+
+.fa-tree{
+    color: #FFFBCE;
+}
 
 #logged-in-img{
     display: flex;
@@ -48,6 +66,10 @@ nav > a {
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+}
+
+#tree-trails-index{
+    color: #054914;
 }
 
 #trails-index-list{

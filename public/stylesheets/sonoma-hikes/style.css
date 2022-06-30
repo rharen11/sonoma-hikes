@@ -282,7 +282,32 @@ td{
 }
 
 .fa-pagelines, .fa-leaf, .fa-temperature-high{
-    padding: 10px;
+    padding: 80px;
+}
+
+.fa-pagelines:hover + .hide{
+    display: flex;
+    flex-direction: column;
+    color: #054914;
+    margin-top: 10px;
+}
+
+.fa-leaf:hover + .hide{
+    display: flex;
+    flex-direction: column;
+    color: #054914;
+    margin-top: 10px;
+}
+
+.fa-temperature-high:hover + .hide{
+    display: flex;
+    flex-direction: column;
+    color: #054914;
+    margin-top: 10px;
+}
+
+.hide{
+    display: none;
 }
 
 nav, footer{

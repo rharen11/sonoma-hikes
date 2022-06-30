@@ -1,27 +1,31 @@
 # Welcome to Sonoma Hiking!
 
+![sonoma-hiking-screenshot] (./assets/sonoma-hiking-screenshot.png)
+
 
 ## This application allows the user to explore the beautiful Hood Mountain in Sonoma County, CA. With the many trails, outlooks, and wildlife the user is sure to find their way to a great experience with nature- all with the guidnace of this application!
 
-- My motivation for this application is simple, I love to hike and want to help others come to love hiking as well!
-- I build this application as a way for users to navigate throughout Hood Mountain based on users' criteria while also providing useful information used to prep for a hike.
-- I learned how to build a smooth UI with the application, incorporating the MEN stack in a way that can be used fluidily by the user. 
+## Getting Started:
 
-## Installation 
+### Deployment
+https://sonoma-hikes.herokuapp.com/
+### Github
+https://github.com/rharen11/sonoma-hikes
+### Trello Planning Board
+https://trello.com/b/AiJ9TXDx/hiking-app
 
-1. Clone the e-generator repository from Github, 
-2. Install Node.js package and add .env file for database connection. 
-
-## Usage
-
-The user will be directed to a welcome page with a Google login. The user will login and be directed to the logged in welcome page. From there, the user can add trails, view their personal profile, and add hikes to their profile. 
+## Technologies Used:
+- HTML
+- CSS
+- Express with Node.js
+- MongoDB with Mongoose
 
 ## Credits
 
 Used bootstrap for styling of cards (https://getbootstrap.com/docs/4.0/components/card/)
 
-## Deployment
-Heroku Deployment: https://sonoma-hikes.herokuapp.com/
+Google fonts (https://fonts.google.com/)
 
-## Github
-Github: https://github.com/rharen11/sonoma-hikes
+## Next Steps
+
+This application is a small jumping off point to a huge community for hikers. In the future I'd like to add features that allow hikers to look at other profiles and other hikers' accomplishments. Having a more interactive application is the goal, not only for users to interact with the application, but to connect with other people. The UI will most likely change in the future, too, as more locations are added along with index views of profiles, community review boards, areas to explore food, shopping, and other things people can do outside of hiking, and anything from user feedback. Logistical items I would like to add are light/dark mode, better background, and polished navigation bar. 

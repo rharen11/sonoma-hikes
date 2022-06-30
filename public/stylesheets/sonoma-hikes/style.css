@@ -281,11 +281,11 @@ td{
     margin: 60px;
 }
 
-.fa-pagelines, .fa-leaf, .fa-temperature-high{
+.fa-sun, .fa-leaf, .fa-temperature-high{
     padding: 80px;
 }
 
-.fa-pagelines:hover + .hide{
+.fa-sun:hover + .hide{
     display: flex;
     flex-direction: column;
     color: #054914;

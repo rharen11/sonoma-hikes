@@ -19,6 +19,12 @@ nav > a {
     color: #004A6F;
   }
 
+#logged-in-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
 #welcome-page{
     display: flex;
     justify-content: center;
@@ -85,12 +91,14 @@ nav > a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 
 .card{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
 }
 
 .card-body{
@@ -106,7 +114,7 @@ nav > a {
     display: flex;
     justify-content: center;
     border: solid thin #FFFBCE;
-    margin-left: 10px;
+    margin-left: 75px;
     border-radius: 100px;
 }
 
@@ -122,6 +130,7 @@ nav > a {
 #add-hike-form{
     display: flex;
     flex-direction: column;
+    margin-top: 80px;
 }
 
 #add-hike-btn{
@@ -197,21 +206,35 @@ td{
     padding: 0.5rem;
 }
 
-#add-new-trail{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 #add-trail-form{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 #add-trail-title{
     display: flex;
     justify-content: center;
+}
+
+#new-trail-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid thin #FFFBCE;
+    border-radius: 100px;
+    margin-left: 360px;
+    margin-top: 100px;
+}
+
+#bootstrap-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid thin #FFFBCE;
+    border-radius: 100px;
+    margin-left: 20px;
 }
 
 nav, footer{

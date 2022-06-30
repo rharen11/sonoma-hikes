@@ -16,6 +16,7 @@ https://trello.com/b/AiJ9TXDx/hiking-app
 ## Technologies Used:
 - HTML
 - CSS
+- Javascript
 - Express with Node.js
 - MongoDB with Mongoose
 - git

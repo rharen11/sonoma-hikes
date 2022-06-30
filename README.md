@@ -1,6 +1,6 @@
 # Welcome to Sonoma Hiking!
 
-![sonoma-hiking-screenshot] (../assets/sonoma-hiking-screenshot.png)
+![sonoma-hiking-screenshot](./assets/sonoma-hiking-screenshot.png)
 
 
 ## This application allows the user to explore the beautiful Hood Mountain in Sonoma County, CA. With the many trails, outlooks, and wildlife the user is sure to find their way to a great experience with nature- all with the guidnace of this application!

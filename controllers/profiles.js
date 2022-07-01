@@ -1,7 +1,7 @@
 import { Profile } from "../models/profile.js";
 
 function show(req, res){
-    Profile.findById(req.params.id)
+  Profile.findById(req.params.id)
   .then(profile => {
     const isSelf = profile._id.equals(req.user.profile._id)
     res.render("profiles/show", {
@@ -17,29 +17,29 @@ function show(req, res){
 }
 
 function newHike(req, res){
-    res.render('hikes/new', {
-        title: "Add Hike"
-    })
+  res.render('hikes/new', {
+    title: "Add Hike"
+  })
     .catch(err => {
-        console.log(err)
-        res.redirect('/')
-    })
+      console.log(err)
+      res.redirect('/')
+  })
 }
 
 function createHike(req, res){
-    Profile.findById(req.user.profile._id)
-    .then(profile => {
-        profile.hikes.push(req.body)
-        console.log(req.body)
-        profile.save()
-        .then(() => {
-            res.redirect(`/profiles/${req.user.profile._id}`)
-        })
-    })
+  Profile.findById(req.user.profile._id)
+  .then(profile => {
+    profile.hikes.push(req.body)
+    console.log(req.body)
+    profile.save()
+    .then(() => {
+      res.redirect(`/profiles/${req.user.profile._id}`)
+     })
+  })
     .catch(err => {
         console.log(err)
         res.redirect(`/profiles/${req.user.profile._id}`)
-      })
+  })
 }
 
 function deleteHike(req, res){
@@ -54,8 +54,8 @@ function deleteHike(req, res){
 }
 
 export{
-    show,
-    newHike as new,
-    createHike,
-    deleteHike as delete
+  show,
+  newHike as new,
+  createHike,
+  deleteHike as delete
 }

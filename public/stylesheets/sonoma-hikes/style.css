@@ -26,7 +26,7 @@ nav > a {
     border-radius: 5px;
     font-size: large;
     color: #054914;
-  }
+}
 
 a:hover, a:visited, a:link, a:active{
     text-decoration: none;
@@ -50,7 +50,7 @@ a:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
+}
 
 #welcome-page{
     display: flex;

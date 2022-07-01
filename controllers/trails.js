@@ -11,7 +11,7 @@ function index(req, res){
     .catch(err => {
         console.log(err)
         res.redirect('/trails')
-      })
+    })
 }
 
 function show(req, res){
@@ -26,7 +26,7 @@ function show(req, res){
     .catch((err) => {
         console.log(err)
         res.redirect("/")
-      })
+    })
 }
 
 function newTrail(req, res){
@@ -41,8 +41,8 @@ function newTrail(req, res){
     .catch(err => {
         console.log(err)
         res.redirect('/trails')
-      })
-    }
+    })
+ }
 
 function create(req, res){
     req.body.owner = req.user.profile._id
@@ -53,27 +53,27 @@ function create(req, res){
     .catch(err => {
         console.log(err)
         res.redirect('/trails')
-      })
-    }
+    })
+}
 
-    function edit(req, res){
-        Trail.findById(req.params.id)
-        .then(trail => {
-            res.render('trails/edit', {
-                trail: trail,
-                title: "Edit Trail"
-            })
+function edit(req, res){
+    Trail.findById(req.params.id)
+    .then(trail => {
+        res.render('trails/edit', {
+            trail: trail,
+            title: "Edit Trail"
         })
+    })
         .catch(err => {
             console.log(err)
             res.redirect('/trails')
-          })
-    }
+        })
+}
 
-    function update(req, res){
-        Trail.findById(req.params.id)
-        .then(trail => {
-            if(trail.owner.equals(req.user.profile._id)){
+function update(req, res){
+    Trail.findById(req.params.id)
+    .then(trail => {
+        if(trail.owner.equals(req.user.profile._id)){
             trail.updateOne(req.body, {new: true})
             .then(updatedTrail => {
                 res.redirect('/trails')
@@ -81,29 +81,29 @@ function create(req, res){
         } else {
             throw new Error ('Not Authorized')
         }
-        })
-        .catch(err => {
-            console.log(err)
-            res.redirect('/trails')
-          })
-    }
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/trails')
+    })
+}
 
 function deleteTrail(req, res){
     Trail.findById(req.params.id)
     .then(trail => {
         if(trail.owner.equals(req.user.profile._id)) {
-        trail.delete()
-        .then(() => {
-        res.redirect('/trails')
-    })
-    } else {
-        throw new Error ('Not Authorized')
-    }
-})   
+            trail.delete()
+            .then(() => {
+                res.redirect('/trails')
+            })
+        } else {
+            throw new Error ('Not Authorized')
+        }
+    })   
     .catch(err => {
         console.log(err)
         res.redirect('/trails')
-      })
+    })
 }
 
 export{

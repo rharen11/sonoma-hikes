@@ -11,14 +11,14 @@
   <div id="trail-index-trails">
     <div id="trails-index-chart-title">
         <h2>Check out the Trails!</h2>
-      </div>
+    </div>
       <div id="trails-index-list">
       <% trails.forEach(trail => { %> 
           <td><%= trail.name %></td>
           <td><a href="/trails/<%= trail._id %>"><i class="fa-solid fa-tree" id="tree-trails-index"></i></a> 
       <% }) %>
-    </div>
-</div>
+      </div>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>

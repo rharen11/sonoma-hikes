@@ -3,32 +3,32 @@
 
 <main>
     <div id="add-new-trail">
-    <div id="add-trail-title">
-    <h1><%= title %></h1>
-    </div>
-    <div id="add-trail-form">
-    <form action="/trails" method="POST">
-        <label for="name-input">Trail Name:</label>
-        <input type="text" name="name" autocomplete="off">
-        <label for="mileage-input">Total Mileage:</label>
-        <input type="text" name="totalMileage" autocomplete="off">
-        <label for="exposure-input">Sun Exposure:</label>
-        <select name="exposure" id="exposure-select" >
-            <option value="minimum">Minimum</option>
-            <option value="moderate">Moderate</option>
-            <option value="high">High</option>
-        </select> 
-        <label for="dogsAllowed-input">Are Dogs Allowed?</label>
-        <select name="dogsAllowed" id="dogsAllowed-select" >
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-        </select> 
-        <button type="submit">Add Trail</button>
-    </form>
-</div>
+        <div id="add-trail-title">
+            <h1><%= title %></h1>
+        </div>
+        <div id="add-trail-form">
+            <form action="/trails" method="POST">
+                <label for="name-input">Trail Name:</label>
+                <input type="text" name="name" autocomplete="off">
+                <label for="mileage-input">Total Mileage:</label>
+                <input type="text" name="totalMileage" autocomplete="off">
+                <label for="exposure-input">Sun Exposure:</label>
+                <select name="exposure" id="exposure-select" >
+                    <option value="minimum">Minimum</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="high">High</option>
+                </select> 
+                <label for="dogsAllowed-input">Are Dogs Allowed?</label>
+                <select name="dogsAllowed" id="dogsAllowed-select" >
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select> 
+                <button type="submit">Add Trail</button>
+            </form>
+        </div>
 <img id="new-trail-img" src="/assets/bodega-coast.jpeg" alt="Card image cap" width="200" height="200">
 
-</div>
+    </div>
 </main>
 
 <%- include('../partials/footer') %>

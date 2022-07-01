@@ -4,73 +4,74 @@
 <main>
   <div class="profiles-show">
     <div class="picture-placeholder">
-  <% if (profile.avatar) { %>
-    <img 
+      <% if (profile.avatar) { %>
+      <img 
       class="profile-avatar"
       src="<%= profile.avatar %>" 
       alt="<%= profile.name %> avatar"
       height="200px" width="200px"
-        >
-    <% } %>
+      >
+      <% } %>
     </div>
   <div>
-  <h1 class="welcome-message">Welcome, <%= profile.name %> !</h1>
-  <form 
-    id="add-hike-form"
-    action="/profiles"
-    method="POST">
-    <form id="new-form" action="/profiles/<%= user.profile._id%>" method="POST">
-      <label for="trail">Trail:</label>
-      <input type="text" name="trail" id="trail" autocomplete="off">
-      <label for="mileage">Mileage:</label>
-      <input type="text" name="mileage" id="mileage" autocomplete="off">
-      <label for="postHike">How did you feel after your hike?</label>
-      <select name="postHike" id="postHike-select" >
+    <h1 class="welcome-message">Welcome, <%= profile.name %> !</h1>
+    <form 
+      id="add-hike-form"
+      action="/profiles"
+      method="POST">
+      <form id="new-form" action="/profiles/<%= user.profile._id%>" method="POST">
+        <label for="trail">Trail:</label>
+        <input type="text" name="trail" id="trail" autocomplete="off">
+        <label for="mileage">Mileage:</label>
+        <input type="text" name="mileage" id="mileage" autocomplete="off">
+        <label for="postHike">How did you feel after your hike?</label>
+        <select name="postHike" id="postHike-select" >
           <option value="great">Great!</option>
           <option value="good">Pretty good</option>
           <option value="tired">Tired</option>
           <option value="exhausted">That was tough!</option>
-      </select> 
-      <label for="timeOfDay-select">Time of Day:</label>
-      <select name="timeOfDay" id="timeOfDay-select" >
-        <option value="morning">Morning</option>
-        <option value="midday">Midday</option>
-        <option value="evening">Evening</option>
-      </select>
-    <label for="add-hike"></label>
-    <button type="submit" id="add-hike-btn">Add Hike!</button>
-  </form>
-  </div>
-</div>
-<div id="show-profiles-hikes">
-  <div id="profile-hike-table-title">
-  <h2>Hikes</h2>
-  </div>
-  <table>
-    <thead>
-  <tr>
-    <th>Trail</th>
-    <th>Miles Hiked</th>
-    <th>Time of Day</th>
-    <th>How I felt after my hike</th>
-  </tr>
-</thead>
-  <tbody>
-    <% profile.hikes.forEach(hike => { %> 
-    <tr>
-      <td><%= hike.trail %></td>
-      <td><%= hike.mileage %></td>
-      <td><%= hike.timeOfDay %></td>
-      <td><%= hike.postHike %></td>
-      <td><form action="/profiles/hikes/<%= hike._id %>?_method=DELETE" method="POST">
-        <button type="submit">Delete</button>
+        </select> 
+        <label for="timeOfDay-select">Time of Day:</label>
+        <select name="timeOfDay" id="timeOfDay-select" >
+          <option value="morning">Morning</option>
+          <option value="midday">Midday</option>
+          <option value="evening">Evening</option>
+        </select>
+        <label for="add-hike"></label>
+        <button type="submit" id="add-hike-btn">Add Hike!</button>
       </form>
-    </td>
-    </tr>
-    <% }) %>
-  </tbody>
-  </table>
   </div>
+  </div>
+  <div id="show-profiles-hikes">
+    <div id="profile-hike-table-title">
+      <h2>Hikes</h2>
+    </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Trail</th>
+            <th>Miles Hiked</th>
+            <th>Time of Day</th>
+            <th>How I felt after my hike</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% profile.hikes.forEach(hike => { %> 
+            <tr>
+              <td><%= hike.trail %></td>
+              <td><%= hike.mileage %></td>
+              <td><%= hike.timeOfDay %></td>
+              <td><%= hike.postHike %></td>
+              <td>
+                <form action="/profiles/hikes/<%= hike._id %>?_method=DELETE" method="POST">
+                <button type="submit">Delete</button>
+                </form>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
   </div>
 </main>
 

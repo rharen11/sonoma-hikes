@@ -143,6 +143,12 @@ a:hover{
     flex-direction: row;
 }
 
+.list-group-flush{
+    background-color: #647899;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
 #trail-show-name{
     margin-left: 20px;
 }

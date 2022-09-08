@@ -1,34 +1,34 @@
-<% if (!user) { %>
-  <link rel="stylesheet" href="/stylesheets/sonoma-hikes/style.css">
-<% } %>
-</head>
-<body>
-  <nav>
-    <% if (user) { %>
-      <a href="/auth/logout">
-        <button type="submit">Logout</button>
-      <a href="/trails/new"
-			<%- title === 'Add Trail' ? 'class="active"' : '' %>
-		  >
-			Add New Trail
-      <i class="fa-solid fa-tree"></i>
-  	  </a> 
-      <a href="/profiles/<%= user.profile._id %>" <%- title === 'My Hikes' ? 'class="active"' : '' %>
-      >
-      My Hikes
-      <i class="fa-solid fa-tree"></i>
-      </a>
-      <a href="/trails" <%- title === 'Explore Hood Mountain' ? 'class="active"' : '' %>
-      >
-      Explore Hood Mountain
-      <i class="fa-solid fa-tree"></i>
-      </a>
-      </a>
-      <% } else { %>
-      <a href="/auth/google" class="siwg-link">
-        <button type="submit" class="siwg">
-        <img id="siwg-image" alt="Sign in with Google" />
-        </button>
-      </a>
-    <% } %>
-  </nav>
+  <% if (!user) { %>
+    <link rel="stylesheet" href="/stylesheets/sonoma-hikes/style.css">
+  <% } %>
+  </head>
+  <body>
+    <nav>
+      <% if (user) { %>
+        <a href="/auth/logout">
+          <button type="submit">Logout</button>
+        <a href="/trails/new"
+        <%- title === 'Add Trail' ? 'class="active"' : '' %>
+        >
+        Add New Trail
+        <i class="fa-solid fa-tree"></i>
+        </a> 
+        <a href="/profiles/<%= user.profile._id %>" <%- title === 'My Hikes' ? 'class="active"' : '' %>
+        >
+        My Hikes
+        <i class="fa-solid fa-tree"></i>
+        </a>
+        <a href="/trails" <%- title === 'Explore Hood Mountain' ? 'class="active"' : '' %>
+        >
+        Explore Hood Mountain
+        <i class="fa-solid fa-tree"></i>
+        </a>
+        </a>
+        <% } else { %>
+        <a href="/auth/google" class="siwg-link">
+          <button type="submit" class="siwg">
+          Sign in with Google
+          </button>
+        </a>
+      <% } %>
+    </nav>
